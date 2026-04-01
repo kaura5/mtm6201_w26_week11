@@ -1,0 +1,49 @@
+body{
+    font-size: 16px;
+}
+
+.box{
+    padding: 20px;
+    margin: 10px;
+}
+
+.px-query{
+    background-color: lightblue;
+}
+
+.em-query{
+    background-color: lightcoral;
+}
+
+@media screen and (min-width:600px){
+    .px-query{
+        display: none;
+    }
+}
+
+@media screen and (min-width:37.5em){
+    .em-query{
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme:dark){
+    body{
+        background-color: rgb(10, 10, 10);
+        color: beige;
+    }
+}
+
+@media (hover: hover){
+    .hover-query::after{
+        content: " (You have hover capable device)";
+        color: green;
+    }
+}
+
+@media (hover: none){
+    .hover-query::after{
+        content: " (You do not have hover capable device)";
+        color: red;
+    }
+}
